@@ -17,7 +17,7 @@ USERNAME=<your-postgresql-user>
 PASSWORD=<your-postgresql-password>
 DATABASE=<your-postgresql-database>
 PORT=<your-port>.
-# Run the migrations:
+# Run the server:
 Copy code
 npm start
 This will start the server at http://localhost:5000.
