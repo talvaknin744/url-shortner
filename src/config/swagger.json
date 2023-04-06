@@ -1,0 +1,80 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ShortUrl API",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/registerUrl": {
+      "post": {
+        "description": "Register a URL",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "url",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "type": "string",
+              "default": "https://short.example.com/abc123"
+            }
+          }
+        }
+      }
+    },
+    "/shortUrl/{url}": {
+      "get": {
+        "description": "Get the full URL from the short URL",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "url",
+            "required": true,
+            "type": "string",
+            "default": "2bbb74f8"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string",
+              "default": "https://example.com"
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "description": "Health check",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string",
+              "default": "OK"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "env": "production",
+    "server": {
+        "port": 5000
+    },
+    "db": {
+        "username": "url",
+        "password": "url",
+        "database": "url"
+    },
+    "log": {
+        "level": "info",
+        "writeToFile": false,
+        "logFilePath": "/home/talvak/Desktop/projects/logs"
+    }
+}
