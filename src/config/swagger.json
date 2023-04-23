@@ -23,9 +23,13 @@
             "in": "body",
             "name": "url",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "default": "https://example.com"
+              }
+          }
           }
         ],
         "responses": {

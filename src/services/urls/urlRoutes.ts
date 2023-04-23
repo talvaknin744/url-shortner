@@ -13,7 +13,7 @@ const routes: Route[] = [
         method: 'post',
         handler: async (req: Request, res: Response, next: NextFunction) => {
             try {
-                if (!UrlSchema.safeParse(req.body.url))
+                if (!UrlSchema.safeParse(req.body.url).success)
                     throw new HTTP400Error(
                         'the supplied string is not a valid url'
                     );
